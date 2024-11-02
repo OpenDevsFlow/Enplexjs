@@ -1,6 +1,6 @@
 {
   "name": "enplex.js",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Enplex is a versatile JavaScript library that simplifies complex development tasks. By providing a unified interface for multiple APIs and services, Enplex empowers developers to build innovative solutions efficiently.",
   "main": "compiler.js",
   "module": "compiler.es.mjs",
@@ -12,6 +12,9 @@
     }
   },
   "keywords": [
+    "explex.js",
+    "enplex",
+    "plex",
     "javascript",
     "library",
     "api",
@@ -60,10 +63,12 @@
   ],
   "author": "Koushik <iscordian.dev@gmail.com>",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iscordian/Enplexjs"
+  },
+  "homepage": "https://github.com/iscordian/Enplexjs",
   "devDependencies": {
     "@types/node": "^18.11.18"
-  },
-  "dependencies": {
-    "enplex.js": "^1.0.0"
   }
 }
