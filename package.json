@@ -62,5 +62,8 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@types/node": "^18.11.18"
+  },
+  "dependencies": {
+    "enplex.js": "^1.0.0"
   }
 }
