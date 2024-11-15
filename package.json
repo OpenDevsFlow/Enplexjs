@@ -1,17 +1,14 @@
 {
   "name": "enplex.js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Enplex is a versatile JavaScript library. providing a unified interface for multiple APIs and services, Enplex empowers developers to build innovative solutions efficiently.",
   "main": "compiler.js",
   "module": "compiler.es.mjs",
   "type": "commonjs",
   "exports": {
-    ".": {
-      "require": "./compiler.js"
-    },
-    "esm": {
-      "import": "./compiler.es.mjs"
-    }
+    ".": "./compiler.js",
+    "./cjs": "./compiler.js",
+    "./esm": "./compiler.es.mjs"
   },
   "keywords": [
     "explex.js",

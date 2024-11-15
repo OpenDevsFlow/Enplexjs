@@ -34,6 +34,9 @@
      - Custom headers and timeouts
      - Retry mechanisms for unreliable APIs
 
+6. **Exe:**
+   - Execute js codes with ease
+   - safer than `eval();`
 **Installation:**
 
 ```bash
@@ -45,6 +48,7 @@ npm install enplex.js
 ```javascript
 // NextChat
 const { nextchat } = require("enplex.js");
+// import { nextchat } from "enplex.js/esm";
 
 (async () => {
   const response = await nextchat.ask("What is the meaning of life?", { model: "gpt4" });
@@ -52,17 +56,19 @@ const { nextchat } = require("enplex.js");
 })();
 
 // Search
-const { Search } = require("enplex.js");
+const { search } = require("enplex.js");
+// import { search } from "enplex.js/esm";
 
 (async () => {
-  const youtubeResults = await Search.yt("JavaScript tutorial");
+  const youtubeResults = await search.yt("JavaScript tutorial");
   console.log(youtubeResults);
 })();
 
 // Rectify
-const { Rectify } = require("enplex.js");
+const { rectify } = require("enplex.js");
+// import { rectify } from "enplex.js/esm";
 
-const app = new Rectify();
+const app = new rectify();
 
 app.get('/', (req, res) => {
   res.send('Hello, World!');
@@ -73,16 +79,25 @@ app.listen(3000, () => {
 });
 
 // Xio
-const { Xio } = require("enplex.js");
+const { xio } = require("enplex.js");
+// import { xio } from "enplex.js/esm";
 
 (async () => {
-  const response = await Xio.request('https://api.example.com/data', {
+  const response = await xio.request('https://api.example.com/data', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ name: 'John Doe' })
   });
   console.log(response);
 })();
+
+// Exe
+const { exe } = require("enplex.js");
+// import { exe } from "enplex.js/esm";
+
+const code = "console.log('hello fron enplex.js')";
+
+exe.run(code);
 ```
 
 **For more detailed usage and advanced features and support, consider joining our discord server.**
