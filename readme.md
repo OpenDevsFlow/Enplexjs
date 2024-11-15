@@ -88,7 +88,3 @@ const { Xio } = require("enplex.js");
 **For more detailed usage and advanced features and support, consider joining our discord server.**
 
 [![Discord Banner](https://api.weblutions.com/discord/invite/Qn5N7gQEcr)](https://discord.gg/Iscordian/Qn5N7gQEcr)
-
-## License
-
-Apache-2.0
