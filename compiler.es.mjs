@@ -7,7 +7,8 @@
  *   nextchat: nextchat,
  *   rectify: rectify,
  *   search: search,
- *   xio: xio
+ *   xio: xio,
+ *   exe: exe
  * }>} A Promise resolving to an object containing the loaded modules.
  */
 async function load() {
@@ -46,12 +47,20 @@ async function load() {
    */
   const xio = (await import("./lib/xio/main.js")).default;
 
+  /**
+   * Imports the Exe module for executing code.
+   *
+   * @type {exe}
+   */
+  const exe = (await import("./lib/exe/main.js")).default;
+
   return {
     discordwh: discordwh,
     nextchat: nextchat,
     rectify: rectify,
     search: search,
-    xio: xio
+    xio: xio,
+    exe: exe
   };
 }
 
@@ -63,7 +72,8 @@ async function load() {
  *   nextchat: nextchat,
  *   rectify: rectify,
  *   search: search,
- *   xio: xio
+ *   xio: xio,
+ *   exe: exe
  * }}
  */
 export default await load();

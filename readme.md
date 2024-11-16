@@ -37,6 +37,7 @@
 6. **Exe:**
    - Execute js codes with ease
    - safer than `eval();`
+
 **Installation:**
 
 ```bash
@@ -46,9 +47,11 @@ npm install enplex.js
 **Usage Examples:**
 
 ```javascript
+const { nextchat, search, rectify, xio, exe } = require("enplex.js");
+// import enplex from "enplex.js/esm";
+// const { nextchat, search, rectify, xio, exe } = enplex;
+
 // NextChat
-const { nextchat } = require("enplex.js");
-// import { nextchat } from "enplex.js/esm";
 
 (async () => {
   const response = await nextchat.ask("What is the meaning of life?", { model: "gpt4" });
@@ -56,8 +59,6 @@ const { nextchat } = require("enplex.js");
 })();
 
 // Search
-const { search } = require("enplex.js");
-// import { search } from "enplex.js/esm";
 
 (async () => {
   const youtubeResults = await search.yt("JavaScript tutorial");
@@ -65,8 +66,6 @@ const { search } = require("enplex.js");
 })();
 
 // Rectify
-const { rectify } = require("enplex.js");
-// import { rectify } from "enplex.js/esm";
 
 const app = new rectify();
 
@@ -79,8 +78,6 @@ app.listen(3000, () => {
 });
 
 // Xio
-const { xio } = require("enplex.js");
-// import { xio } from "enplex.js/esm";
 
 (async () => {
   const response = await xio.request('https://api.example.com/data', {
@@ -92,8 +89,6 @@ const { xio } = require("enplex.js");
 })();
 
 // Exe
-const { exe } = require("enplex.js");
-// import { exe } from "enplex.js/esm";
 
 const code = "console.log('hello fron enplex.js')";
 
