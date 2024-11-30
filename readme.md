@@ -1,100 +1,49 @@
-**Enplex.js: A Versatile JavaScript Library**
+**Enplex.js: A Comprehensive JavaScript Toolkit**
 
-*Enplex.js is a comprehensive JavaScript library designed to streamline various development tasks. By providing a unified interface for multiple APIs and services, Enplex.js empowers developers to build innovative solutions efficiently.*
+Enplex.js is a versatile JavaScript library designed to simplify and enhance web development. It provides a unified interface for interacting with various APIs and services, empowering developers to build robust and innovative applications.
 
 **Key Features:**
 
-1. **NextChat:**
-   - Seamlessly interact with advanced AI models like GPT-4 and Claude.
-   - Generate text, images, and analyze image content without the need for API keys.
-   - Supported models include: gemini, gemini-pro, gpt4, gpt4o, claude-sonnet, claude-haiku, flux, and flux-pro.
-
-2. **Search:**
-   - Effortlessly search across popular platforms:
-     - YouTube
-     - Spotify
-     - GitHub
-   - Retrieve additional content:
-     - Cat facts
-     - Dog facts
-     - Quotes
-     - Waifu images
-
-3. **DiscordWH:**
-   - Send Discord webhook messages with customizable embeds and attachments.
-   - Note: This feature may require additional setup or configuration.
-
-4. **Rectify:**
-   - Build web applications with a minimalist and efficient Express.js-inspired framework.
-   - Enjoy a streamlined development experience with features like routing, middleware, error handling, and static file serving.
-
-5. **Xio:**
-   - Make HTTP requests with ease, supporting:
-     - GET, POST, and other HTTP methods
-     - Custom headers and timeouts
-     - Retry mechanisms for unreliable APIs
-
-6. **Exe:**
-   - Execute js codes with ease
-   - safer than `eval();`
+* **NextChat:** 
+   - Seamless integration with advanced AI models for generating text, images, and upscaling image.
+   - Supports a wide range of models, including GPT-4, Claude, and various Llama models.
+   - No need for individual API keys.
+* **Search:** 
+   - Effortless searching across popular platforms like YouTube, Spotify, and GitHub.
+* **Random:** 
+   - Access to a variety of random content, including cat facts, dog facts, quotes, and anime-related images.
+* **DiscordWH:** 
+   - Send customized Discord webhook messages with embeds and attachments.
+* **Rectify:** 
+   - A minimalist framework for building web applications inspired by Express.js.
+   - Features include routing, middleware, error handling, and static file serving.
+* **Xio:** 
+   - A powerful HTTP client for making requests with ease, supporting various HTTP methods, custom headers, timeouts, and retry mechanisms.
+* **Executor:** 
+   - Safely execute JavaScript code within your applications.
+* **Import:** 
+   - Import ES modules in CommonJS files.
+   - Import CommonJS modules in ESM files.
 
 **Installation:**
 
 ```bash
-npm install enplex.js
+npm install enplex.js@latest
 ```
 
-**Usage Examples:**
+**Usage Example:**
 
 ```javascript
-const { nextchat, search, rectify, xio, exe } = require("enplex.js");
-// import enplex from "enplex.js/esm";
-// const { nextchat, search, rectify, xio, exe } = enplex;
-
-// NextChat
+const { NextChat } = require("enplex.js");
 
 (async () => {
-  const response = await nextchat.ask("What is the meaning of life?", { model: "gpt4" });
+  const response = await NextChat.ask("What is the meaning of life?", { model: "gemini" });
   console.log(response);
 })();
-
-// Search
-
-(async () => {
-  const youtubeResults = await search.yt("JavaScript tutorial");
-  console.log(youtubeResults);
-})();
-
-// Rectify
-
-const app = new rectify();
-
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
-});
-
-app.listen(3000, () => {
-  console.log('Server listening on port 3000');
-});
-
-// Xio
-
-(async () => {
-  const response = await xio.request('https://api.example.com/data', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ name: 'John Doe' })
-  });
-  console.log(response);
-})();
-
-// Exe
-
-const code = "console.log('hello fron enplex.js')";
-
-exe.run(code);
 ```
 
-**For more detailed usage and advanced features and support, consider joining our discord server.**
+**For more in-depth usage and advanced features, join our community on Discord.**
 
-[![Discord Banner](https://api.weblutions.com/discord/invite/Qn5N7gQEcr)](https://discord.gg/Iscordian/Qn5N7gQEcr)
+[![Iscordian Community Banner](https://api.weblutions.com/discord/invite/Qn5N7gQEcr)](https://discord.gg/Iscordian/Qn5N7gQEcr)
+
+**Enplex.js: Your All-in-One JavaScript Solution**

@@ -1,60 +1,17 @@
-/**
- * Exports essential modules for various functionalities.
- *
- * @module
- */
 module.exports = {
-  /**
-   * The NextChat module for interacting with AI chat and image models.
-   *
-   * @module nextchat
-   * @see module:nextchat
-   * @type {nextchat}
-   */
-  nextchat: require("./lib/nextchat/main"),
+  NextChat: require("./lib/nextchat/main.js"),
 
-  /**
-   * The Discord Webhook module for sending messages to Discord.
-   *
-   * @module discordwh
-   * @see module:discordwh
-   * @type {discordwh}
-   */
-  discordwh: require("./lib/discordwh/main"),
+  DiscordWebHook: require("./lib/discordwh/main.js"),
 
-  /**
-   * The Rectify module for building web servers.
-   *
-   * @module rectify
-   * @see module:rectify
-   * @type {rectify}
-   */
-  rectify: require("./lib/rectify/main"),
+  Rectify: require("./lib/rectify/main.js"),
 
-  /**
-   * The Search module for various search functionalities.
-   *
-   * @module search
-   * @see module:search
-   * @type {search}
-   */
-  search: require("./lib/search/main"),
+  Random: require("./lib/random/main.js"),
 
-  /**
-   * The Xio module for making HTTP requests.
-   *
-   * @module xio
-   * @see module:xio
-   * @type {xio}
-   */
-  xio: require("./lib/xio/main"),
+  Search: require("./lib/search/main.js"),
 
-  /**
-   * The Exe module for executing codes.
-   *
-   * @module exe
-   * @see module:exe
-   * @type {exe}
-   */
-  exe: require("./lib/exe/main"),
+  Xio: require("./lib/xio/main.js"),
+
+  Executor: require("./lib/exe/main.js"),
+
+  Import: require("./lib/import/main.js"),
 };
