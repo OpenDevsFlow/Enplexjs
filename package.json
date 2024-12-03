@@ -68,5 +68,8 @@
   "homepage": "https://github.com/iscordian/Enplexjs",
   "devDependencies": {
     "@types/node": "^22.9.0"
+  },
+  "dependencies": {
+    "enplex.js": "^1.0.7"
   }
 }
