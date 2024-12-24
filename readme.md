@@ -1,8 +1,23 @@
-**Enplex.js: A Comprehensive JavaScript Toolkit**
+<p align = "center">
+   
+![Screenshot 2024-12-24 205609](https://github.com/user-attachments/assets/415145ab-18f3-4da2-8298-80b6fde96db3)
+</p>
+
+<h1 align = "center">
+Enplex.js: A Comprehensive JavaScript Toolkit
+</h1>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/enplex.js">
+    <img src="https://img.shields.io/badge/npm-package-red.svg">
+  </a>
+</p>
+
+## 💻 About:
 
 Enplex.js is a versatile JavaScript library designed to simplify and enhance web development. It provides a unified interface for interacting with various APIs and services, empowering developers to build robust and innovative applications.
 
-**Key Features:**
+## ⭐ Key Features:
 
 * **NextChat:** 
    - Seamless integration with advanced AI models for generating text, images, and upscaling image.
@@ -25,15 +40,15 @@ Enplex.js is a versatile JavaScript library designed to simplify and enhance web
    - Import ES modules in CommonJS files.
    - Import CommonJS modules in ESM files.
 
-**Installation:**
+## ⚡ Installation:
 
 ```bash
 npm install enplex.js@latest
 ```
 
-**Usage Example:**
+## Usage Example:
 
-```javascript
+```js
 const { NextChat } = require("enplex.js");
 
 (async () => {
@@ -46,4 +61,3 @@ const { NextChat } = require("enplex.js");
 
 [![Iscordian Community Banner](https://api.weblutions.com/discord/invite/Qn5N7gQEcr)](https://discord.gg/Iscordian/Qn5N7gQEcr)
 
-**Enplex.js: Your All-in-One JavaScript Solution**
