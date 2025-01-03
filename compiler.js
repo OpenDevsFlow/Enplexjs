@@ -14,4 +14,6 @@ module.exports = {
   Executor: require("./lib/exe/main.js"),
 
   Import: require("./lib/import/main.js"),
+
+  Collection: require("./lib/collection/main.js"),
 };

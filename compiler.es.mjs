@@ -15,6 +15,8 @@ async function load() {
 
   const Import = (await import("./lib/import/main.js")).default;
 
+  const Collection = (await import("./lib/collection/main.js")).default;
+
   return {
     DiscordWebHook: DiscordWebHook,
     NextChat: NextChat,
@@ -24,6 +26,7 @@ async function load() {
     Xio: Xio,
     Executor: Executor,
     Import: Import,
+    Collection: Collection,
   };
 }
 
