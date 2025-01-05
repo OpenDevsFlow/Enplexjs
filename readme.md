@@ -59,5 +59,5 @@ const { NextChat } = require("enplex.js");
 
 **For more in-depth usage and advanced features, join our community on Discord.**
 
-[![Iscordian Community Banner](https://api.weblutions.com/discord/invite/Qn5N7gQEcr)](https://discord.gg/Iscordian/Qn5N7gQEcr)
+[![Iscordian Community Banner](https://api.weblutions.com/discord/invite/a2c3QTWkuk)](https://discord.gg/a2c3QTWkuk)
 
