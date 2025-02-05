@@ -9,7 +9,8 @@ const modules = {
   Executor: "./lib/exe/main.js",
   Import: "./lib/import/main.js",
   Collection: "./lib/collection/main.js",
-  Logger: "./lib/logger/main.js"
+  Logger: "./lib/logger/main.js",
+  EventEmitter: "./lib/events/main.js"
 };
 
 function loadModule(name, path) {
