@@ -1,6 +1,6 @@
 {
   "name": "enplex.js",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Enplex is a versatile JavaScript library. providing a unified interface for multiple APIs and services, Enplex empowers developers to build innovative solutions efficiently.",
   "main": "compiler.js",
   "type": "commonjs",
@@ -66,6 +66,9 @@
     "url": "https://github.com/OpenDevsFlow/Enplexjs.git"
   },
   "homepage": "https://github.com/OpenDevsFlow/Enplexjs",
+  "dependencies": {
+    "discord.js": "^x.x.x"
+  },
   "devDependencies": {
     "@types/node": "^22.9.0"
   }

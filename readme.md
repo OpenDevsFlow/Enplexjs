@@ -7,7 +7,7 @@ Enplex.js: A Comprehensive JavaScript Toolkit
   <a href="https://www.npmjs.com/package/enplex.js">
     <img src="https://img.shields.io/badge/npm-package-red.svg">
   </a>
-  <a href="https://replit.com/@OpenDevsFlow/Enplexjs">
+  <a href="https://github.com/OpenDevsFlow/Enplexjs">
     <img src="https://img.shields.io/badge/replit-fork_me-blue.svg">
   </a>
   <a href="https://github.com/OpenDevsFlow/Enplexjs/blob/main/LICENSE">
@@ -22,7 +22,6 @@ Enplex.js: A Comprehensive JavaScript Toolkit
 - [Core Modules](#core-modules)
 - [Advanced Usage](#advanced-usage)
 - [Error Handling](#error-handling)
-- [Maintenance Mode](#maintenance-mode)
 - [Examples](#examples)
 - [Contributing](#contributing)
 - [License](#license)
@@ -31,9 +30,9 @@ Enplex.js: A Comprehensive JavaScript Toolkit
 Enplex.js is a versatile JavaScript library designed to simplify and enhance web development. It provides a unified interface for interacting with various APIs and services, empowering developers to build robust and innovative applications.
 
 ## ⭐ Features
-- **AI Integration**: Chat, image generation, and TTS capabilities
+- **AI Integration**: Chat, image generation, and TTS capabilities - **Under Maintenance**
 - **Web Framework**: Built-in Express-like web server
-- **Search APIs**: YouTube, Spotify, and GitHub integration
+- **Search APIs**: YouTube, Spotify, and GitHub integration - **Under Maintenance**
 - **Discord Tools**: Webhook and embed builder
 - **HTTP Client**: Advanced request handling with retries
 - **Utilities**: Validation, logging, and collections
@@ -49,7 +48,7 @@ npm install enplex.js@latest
 
 ## 🚀 Core Modules
 
-### NextChat - AI Integration
+### NextChat - AI Integration - Under Maintenance!!
 
 ```javascript
 const { NextChat } = require('enplex.js');
@@ -124,8 +123,8 @@ console.log(upscaled);
   - Parallel processing
   - Resource management
   - Memory efficient
-</details>
 
+```javascript
 // Basic usage
 const response = await NextChat.ask("What is JavaScript?", {
   model: "gemini",
@@ -164,7 +163,7 @@ const upscaled = await NextChat.upscale(imageUrl);
 
 </details>
 
-### Search - Multi-Platform Search
+### Search - Multi-Platform Search - Under Maintenance
 
 ```javascript
 const { Search } = require('enplex.js');
@@ -249,8 +248,8 @@ async function searchAllPlatforms(query) {
 - Response caching
 - JSON formatted responses
 - Pagination support
-</details>
 
+```javascript
 // YouTube Search
 const videos = await Search.yt("coding tutorials");
 
@@ -390,16 +389,6 @@ try {
 ```
 </details>
 
-## 🔄 Maintenance Mode
-```javascript
-const Maintenance = require('enplex.js').Maintenance;
-
-// Check module status
-if (!Maintenance.isUnderMaintenance("NextChat")) {
-  // Use NextChat
-}
-```
-
 ## 📝 Examples
 
 ### Full Web Server Example
@@ -449,7 +438,7 @@ async function generateContent() {
 ```
 
 ## 🤝 Contributing
-1. Fork the project on Replit
+1. Fork the project on GitHub
 2. Create your feature branch
 3. Commit your changes
 4. Push to your fork
@@ -459,4 +448,4 @@ async function generateContent() {
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
 
 ---
-Made with ❤️ by the Enplex.js Team
+Made with ❤️ by the [OpenDevsFlow](https://discord.gg/6UGYjhSS5v) Team
