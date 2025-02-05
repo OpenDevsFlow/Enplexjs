@@ -10,7 +10,9 @@ const modules = {
   Import: "./lib/import/main.js",
   Collection: "./lib/collection/main.js",
   Logger: "./lib/logger/main.js",
-  EventEmitter: "./lib/events/main.js"
+  EventEmitter: "./lib/events/main.js",
+  Validator: "./lib/validator/main.js",
+  Queue: "./lib/queue/main.js"
 };
 
 const Maintenance = require('./lib/maintenance.js');
