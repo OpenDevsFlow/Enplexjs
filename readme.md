@@ -50,37 +50,79 @@ npm install enplex.js@latest
 ## 🚀 Core Modules
 
 ### NextChat - AI Integration
+<details>
+<summary>View NextChat Features</summary>
+
+#### Text Generation
 ```javascript
 const { NextChat } = require('enplex.js');
 
-// Text Generation
+// Basic usage
 const response = await NextChat.ask("What is JavaScript?", {
   model: "gemini",
   cache: true
 });
 
-// Image Generation
+// Available models
+const models = [
+  "gpt4o", "gemini", "llama-vision", 
+  "gemma2-9b", "gemma-7b", "groq-70b",
+  "groq-8b", "llama3-70b", "llama3-8b",
+  "llama3-1b", "llama3-3b", "llama3-11b",
+  "llama3-90b", "llama-guard"
+];
+```
+
+#### Image Generation
+```javascript
+// Generate image
 const image = await NextChat.imagine("sunset over mountains", {
   model: "prodia"
 });
 
-// Text-to-Speech
-const audio = await NextChat.tts("Hello World");
+// Available models
+const imgModels = ["animagen", "prodia", "mageai", "xl3"];
 ```
 
+#### Text-to-Speech
+```javascript
+// Convert text to speech
+const audio = await NextChat.tts("Hello World");
+
+// Upscale images
+const upscaled = await NextChat.upscale(imageUrl);
+```
+
+</details>
+
 ### Search - Multi-Platform Search
+<details>
+<summary>View Search Features</summary>
+
 ```javascript
 const { Search } = require('enplex.js');
 
 // YouTube Search
-const videos = await Search.youtube("coding tutorials");
+const videos = await Search.yt("coding tutorials");
 
-// GitHub Search
+// GitHub Repositories
 const repos = await Search.github("javascript libraries");
 
-// Spotify Search
-const tracks = await Search.spotify("rock music");
+// Pinterest Images
+const pins = await Search.pin("web design inspiration");
+
+// Pexels Photos
+const photos = await Search.pexels("nature");
+
+// Wallpapers
+const wallpapers = await Search.wallpaper("abstract");
+
+// Anime Wallpapers
+const animeWalls = await Search.animeWallpaper("naruto");
 ```
+
+Each search method returns a JSON response with relevant results from the respective platform.
+</details>
 
 ### Rectify - Web Framework
 ```javascript
@@ -159,6 +201,10 @@ const response = await Xio.request("https://api.example.com", {
 ```
 
 ## ❌ Error Handling
+<details>
+<summary>View Error Handling Examples</summary>
+
+#### Basic Error Handling
 ```javascript
 try {
   const response = await NextChat.ask("Question");
@@ -166,6 +212,34 @@ try {
   Logger.error(`AI Error: ${error.message}`);
 }
 ```
+
+#### Validation Errors
+```javascript
+// Handle empty inputs
+try {
+  await NextChat.ask("");
+} catch (error) {
+  // Throws: "NextChat Error: Empty prompt"
+}
+
+// Handle invalid models
+try {
+  await NextChat.ask("Hello", { model: "invalid" });
+} catch (error) {
+  // Throws: "NextChat Error: Invalid model"
+}
+```
+
+#### Network Errors
+```javascript
+try {
+  await NextChat.imagine("prompt", { timeout: 5000 });
+} catch (error) {
+  // Handle timeout or network errors
+  Logger.error(`Network Error: ${error.message}`);
+}
+```
+</details>
 
 ## 🔄 Maintenance Mode
 ```javascript
