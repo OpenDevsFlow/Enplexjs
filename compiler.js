@@ -30,12 +30,4 @@ const loadedModules = Object.entries(modules).reduce((acc, [name, path]) => {
   return acc;
 }, {});
 
-// Validate required modules are loaded
-const requiredModules = ['NextChat', 'Rectify', 'Xio'];
-const missingModules = requiredModules.filter(module => !loadedModules[module]);
-
-if (missingModules.length > 0) {
-  throw new Error(`Critical modules missing: ${missingModules.join(', ')}`);
-}
-
 module.exports = loadedModules;

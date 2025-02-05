@@ -9,7 +9,8 @@ const modules = {
   Executor: "./lib/exe/main.js",
   Import: "./lib/import/main.js",
   Collection: "./lib/collection/main.js",
-  Logger: "./lib/logger/main.js"
+  Logger: "./lib/logger/main.js",
+  EventEmitter: "./lib/events/main.js"
 };
 
 async function loadModule(name, path) {
@@ -30,14 +31,6 @@ async function load() {
     if (module) {
       loadedModules[name] = module;
     }
-  }
-
-  // Validate required modules
-  const requiredModules = ['NextChat', 'Rectify', 'Xio'];
-  const missingModules = requiredModules.filter(module => !loadedModules[module]);
-
-  if (missingModules.length > 0) {
-    throw new Error(`Critical modules missing: ${missingModules.join(', ')}`);
   }
 
   return loadedModules;
