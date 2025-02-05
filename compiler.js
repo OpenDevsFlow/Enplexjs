@@ -13,8 +13,14 @@ const modules = {
   EventEmitter: "./lib/events/main.js"
 };
 
+const Maintenance = require('./lib/maintenance.js');
+
 function loadModule(name, path) {
   try {
+    if (Maintenance.isUnderMaintenance(name)) {
+      console.warn(`⚠️ Warning: Module ${name} is currently under maintenance`);
+      return null;
+    }
     return require(path);
   } catch (error) {
     console.error(`Failed to load module ${name}: ${error.message}`);

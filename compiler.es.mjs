@@ -13,8 +13,14 @@ const modules = {
   EventEmitter: "./lib/events/main.js"
 };
 
+import Maintenance from './lib/maintenance.js';
+
 async function loadModule(name, path) {
   try {
+    if (Maintenance.isUnderMaintenance(name)) {
+      console.warn(`⚠️ Warning: Module ${name} is currently under maintenance`);
+      return null;
+    }
     const module = await import(path);
     return module.default;
   } catch (error) {
