@@ -12,7 +12,8 @@ const modules = {
   Logger: "./lib/logger/main.js",
   EventEmitter: "./lib/events/main.js",
   Validator: "./lib/validator/main.js",
-  Queue: "./lib/queue/main.js"
+  Queue: "./lib/queue/main.js",
+  DiscordEmbedBuilder: "./lib/discord/embed-builder.js"
 };
 
 const Maintenance = require('./lib/maintenance.js');
