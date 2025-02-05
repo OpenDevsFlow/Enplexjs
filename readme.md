@@ -1,9 +1,5 @@
-<p align = "center">
-   
-![Screenshot 2024-12-24 205609](https://github.com/user-attachments/assets/415145ab-18f3-4da2-8298-80b6fde96db3)
-</p>
 
-<h1 align = "center">
+<h1 align="center">
 Enplex.js: A Comprehensive JavaScript Toolkit
 </h1>
 
@@ -11,53 +7,146 @@ Enplex.js: A Comprehensive JavaScript Toolkit
   <a href="https://www.npmjs.com/package/enplex.js">
     <img src="https://img.shields.io/badge/npm-package-red.svg">
   </a>
+  <a href="https://replit.com/@OpenDevsFlow/Enplexjs">
+    <img src="https://img.shields.io/badge/replit-fork_me-blue.svg">
+  </a>
+  <a href="https://github.com/OpenDevsFlow/Enplexjs/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/license-Apache_2.0-green.svg">
+  </a>
 </p>
 
-## 💻 About:
+## 📚 Table of Contents
+- [About](#about)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Modules](#modules)
+- [Maintenance Mode](#maintenance-mode)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [License](#license)
 
+## 🎯 About
 Enplex.js is a versatile JavaScript library designed to simplify and enhance web development. It provides a unified interface for interacting with various APIs and services, empowering developers to build robust and innovative applications.
 
-## ⭐ Key Features:
+## ⭐ Features
+- **Modular Architecture**: Each functionality is encapsulated in its own module
+- **Easy Integration**: Simple to integrate with existing projects
+- **Comprehensive Tools**: From AI chat to Discord webhooks
+- **Type Safety**: Built with reliability in mind
+- **Maintenance Mode**: Built-in maintenance mode for each module
 
-* **NextChat:** 
-   - Seamless integration with advanced AI models for generating text, images, and upscaling image.
-   - Supports a wide range of models, including GPT-4, Claude, and various Llama models.
-   - No need for individual API keys.
-* **Search:** 
-   - Effortless searching across popular platforms like YouTube, Spotify, and GitHub.
-* **Random:** 
-   - Access to a variety of random content, including cat facts, dog facts, quotes, and anime-related images.
-* **DiscordWH:** 
-   - Send customized Discord webhook messages with embeds and attachments.
-* **Rectify:** 
-   - A minimalist framework for building web applications inspired by Express.js.
-   - Features include routing, middleware, error handling, and static file serving.
-* **Xio:** 
-   - A powerful HTTP client for making requests with ease, supporting various HTTP methods, custom headers, timeouts, and retry mechanisms.
-* **Executor:** 
-   - Safely execute JavaScript code within your applications.
-* **Import:** 
-   - Import ES modules in CommonJS files.
-   - Import CommonJS modules in ESM files.
-
-## ⚡ Installation:
+## 📦 Installation
 
 ```bash
 npm install enplex.js@latest
 ```
 
-## Usage Example:
+## 🚀 Usage
 
-```js
-const { NextChat } = require("enplex.js");
+```javascript
+// CommonJS
+const { NextChat, Search, Random } = require('enplex.js');
 
-(async () => {
-  const response = await NextChat.ask("What is the meaning of life?", { model: "gemini" });
-  console.log(response);
-})();
+// ES Modules
+import { NextChat, Search, Random } from 'enplex.js/esm';
 ```
 
-**For more in-depth usage and advanced features, join our community on Discord.**
+## 📘 Modules
 
-[![Iscordian Community Banner](https://api.weblutions.com/discord/invite/Qn5N7gQEcr)](https://discord.gg/Iscordian/Qn5N7gQEcr)
+### NextChat
+AI-powered chat functionality supporting multiple models:
+- GPT-4
+- Claude
+- Gemini
+- Llama models
 
+```javascript
+const response = await NextChat.ask("What is JavaScript?", { model: "gemini" });
+```
+
+### Search
+Multi-platform search capabilities:
+- YouTube
+- Spotify
+- GitHub
+
+```javascript
+const results = await Search.youtube("JavaScript tutorials");
+```
+
+### Validator
+Input validation utilities:
+```javascript
+Validator.isEmail("user@example.com");    // true
+Validator.isURL("https://example.com");   // true
+```
+
+### Logger
+Advanced logging system:
+```javascript
+Logger.setLevel("DEBUG");
+Logger.info("Application started");
+```
+
+### Rectify
+Express-inspired web framework:
+```javascript
+const app = new Rectify();
+app.get("/", (req, res) => res.send("Hello World"));
+```
+
+### Other Modules
+- **DiscordWebHook**: Send Discord messages
+- **Random**: Generate random content
+- **Xio**: HTTP client
+- **Executor**: Safe code execution
+- **Queue**: Task queue management
+- **EventEmitter**: Event handling
+- **Collection**: Data structure utilities
+
+## 🔧 Maintenance Mode
+Check module availability:
+```javascript
+const Maintenance = require('enplex.js').Maintenance;
+if (!Maintenance.isUnderMaintenance("NextChat")) {
+  // Use NextChat module
+}
+```
+
+## 📝 Examples
+
+### AI Chat
+```javascript
+const { NextChat } = require('enplex.js');
+
+async function chatExample() {
+  const response = await NextChat.ask("What is the meaning of life?", {
+    model: "gemini"
+  });
+  console.log(response);
+}
+```
+
+### Discord Webhook
+```javascript
+const { DiscordWebHook } = require('enplex.js');
+
+async function sendMessage() {
+  const webhook = new DiscordWebHook("YOUR_WEBHOOK_URL");
+  await webhook.send("Hello Discord!");
+}
+```
+
+## 🤝 Contributing
+1. Fork the project on Replit
+2. Create your feature branch
+3. Commit your changes
+4. Push to your fork
+5. Open a Pull Request
+
+## 📄 License
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+---
+Made with ❤️ by the Enplex.js Team
