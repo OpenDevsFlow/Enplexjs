@@ -50,12 +50,81 @@ npm install enplex.js@latest
 ## 🚀 Core Modules
 
 ### NextChat - AI Integration
-<details>
-<summary>View NextChat Features</summary>
 
-#### Text Generation
 ```javascript
 const { NextChat } = require('enplex.js');
+
+// Text Generation Example
+const response = await NextChat.ask("What can you tell me about JavaScript?", {
+  model: "gemini",
+  cache: true
+});
+console.log(response);
+
+// Image Generation Example
+const image = await NextChat.imagine("A beautiful sunset over mountains", {
+  model: "prodia"
+});
+console.log(image);
+
+// Text-to-Speech Example
+const audio = await NextChat.tts("Welcome to Enplex.js!");
+console.log(audio);
+
+// Image Upscaling Example
+const upscaled = await NextChat.upscale("https://example.com/image.jpg");
+console.log(upscaled);
+```
+
+<details>
+<summary>View All NextChat Features</summary>
+
+### Text Generation
+- Supports multiple AI models:
+  - GPT-4 (`gpt4o`)
+  - Google Gemini (`gemini`)
+  - Llama Vision (`llama-vision`)
+  - Gemma 2 9B (`gemma2-9b`)
+  - Gemma 7B (`gemma-7b`)
+  - Groq Models (`groq-70b`, `groq-8b`)
+  - Llama3 Models (`llama3-70b`, `llama3-8b`, `llama3-1b`, `llama3-3b`, `llama3-11b`, `llama3-90b`)
+  - Llama Guard (`llama-guard`)
+
+### Image Generation
+- Multiple Image Models:
+  - Animagen: Specialized in anime-style images
+  - Prodia: General purpose image generation
+  - Mage AI: Advanced image synthesis
+  - XL3: High-quality image generation
+
+### Text-to-Speech
+- Features:
+  - Natural voice synthesis
+  - Support for multiple languages
+  - Adjustable speech parameters
+  - Returns base64 encoded audio
+
+### Image Upscaling
+- Capabilities:
+  - 4x upscaling
+  - Quality enhancement
+  - Noise reduction
+  - Detail preservation
+
+### Advanced Features
+- Built-in caching system
+  - 1-hour cache duration
+  - Automatic cache cleanup
+  - Memory-efficient storage
+- Error handling
+  - Timeout protection (30s)
+  - Invalid input validation
+  - API error handling
+- Performance optimizations
+  - Parallel processing
+  - Resource management
+  - Memory efficient
+</details>
 
 // Basic usage
 const response = await NextChat.ask("What is JavaScript?", {
@@ -96,11 +165,91 @@ const upscaled = await NextChat.upscale(imageUrl);
 </details>
 
 ### Search - Multi-Platform Search
-<details>
-<summary>View Search Features</summary>
 
 ```javascript
 const { Search } = require('enplex.js');
+
+// YouTube Search Example
+const videos = await Search.yt("programming tutorials");
+console.log(videos);
+
+// GitHub Search Example
+const repos = await Search.github("javascript libraries");
+console.log(repos);
+
+// Pinterest Search Example
+const pins = await Search.pin("web design inspiration");
+console.log(pins);
+
+// Combined Search Example
+async function searchAllPlatforms(query) {
+  const [videos, repos, images] = await Promise.all([
+    Search.yt(query),
+    Search.github(query),
+    Search.pin(query)
+  ]);
+  return { videos, repos, images };
+}
+```
+
+<details>
+<summary>View All Search Features</summary>
+
+### YouTube Search
+- Features:
+  - Video search with metadata
+  - Channel information
+  - View counts and ratings
+  - Video duration
+  - Thumbnail URLs
+
+### GitHub Search
+- Capabilities:
+  - Repository search
+  - Code search
+  - User profiles
+  - Star counts
+  - Language statistics
+
+### Pinterest Search
+- Features:
+  - Image search
+  - Board discovery
+  - Pin metadata
+  - Creator information
+  - Related pins
+
+### Pexels Search
+- Features:
+  - High-quality stock photos
+  - Photographer credits
+  - Image dimensions
+  - Download URLs
+  - License information
+
+### Wallpaper Search
+- Capabilities:
+  - HD wallpapers
+  - Multiple resolutions
+  - Categories
+  - Author information
+  - Download links
+
+### Anime Wallpaper Search
+- Features:
+  - Anime-specific wallpapers
+  - Character tags
+  - Series information
+  - Resolution options
+  - Artist credits
+
+### Common Features
+- Rate limiting protection
+- Error handling
+- Response caching
+- JSON formatted responses
+- Pagination support
+</details>
 
 // YouTube Search
 const videos = await Search.yt("coding tutorials");
